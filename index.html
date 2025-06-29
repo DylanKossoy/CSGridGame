@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Science game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="start-page">
+      <h1>Start Game</h1>
+      <input type="text" placeholder="Enter name" class="player-name" />
+
+      <button class="start-button">Start Game</button>
+    </div>
+
+    <div class="info-section">
+      <div class="player-container">
+        <h3>
+          Player: <span class="player-name-location"></span
+          ><span class="player-icon" id="player-icon"> &#9819;</span>
+        </h3>
+        <h3>Health: <span class="health-icon">100</span></h3>
+      </div>
+
+      <div class="icons-container">
+        <h4>
+          <span class="bag-icon">🎒</span>:
+          <span class="player-inventory"> </span>
+        </h4>
+        <h4>
+          <span class="coin-icon">🪙</span>:
+          <span class="player-coins"> 0</span>
+        </h4>
+        <h4>
+          <span class="diamond-icon">💎</span>:
+          <span class="player-diamonds"> 0</span>
+        </h4>
+        <h4>
+          <span class="emerald-icon" id="emerald-space">♦</span> :
+          <span class="player-emeralds"> 0</span>
+        </h4>
+        <h4>
+          <span class="ruby-icon" id="ruby-space">⌔</span> :
+          <span class="player-rubys"> 0</span>
+        </h4>
+      </div>
+      <div class="buttons">
+        <button class="shop-store">Shop</button>
+        <button class="help-button">Help</button>
+      </div>
+    </div>
+
+    <div class="gameboard-container">
+      <div class="gameboard">
+        <div class="gameboard-level1"></div>
+
+        <div class="gameboard-level2"></div>
+
+        <div class="gameboard-level3"></div>
+
+        <div class="gameboard-level4"></div>
+      </div>
+    </div>
+
+    <div class="help-container">
+      <p>level 1 block - <span class="level1-block-icon">⛝</span></p>
+      <p>level 2 block - <span class="level2-block-icon">⛞</span></p>
+      <p>level 3 block - <span class="level3-block-icon">⛋</span></p>
+      <p>key - <span class="key-icon">🗝</span></p>
+      <p>locked - <span class="locked-icon">🔒</span></p>
+      <p>unlocked - <span class="unlocked-icon">🔓</span></p>
+      <p>coin - <span class="coin-icon">🪙</span></p>
+      <p>diamond - <span class="diamond-icon">💎</span></p>
+      <p>ruby - <span class="coin-icon">♦</span></p>
+      <p>pickaxe - <span class="pickaxe-icon">⛏</span></p>
+      <p>scythe - <span class="scythe-icon">☭</span></p>
+      <p>toxin - <span class="toxin-icon">☣</span></p>
+    </div>
+
+    <div class="win-container">
+      <h1>You Win!</h1>
+      <button class="play-again">Play Again</button>
+    </div>
+
+    <div class="lose-container">
+      <h1>You Lose :(</h1>
+      <button class="play-again">Play Again</button>
+    </div>
+  </body>
+</html>

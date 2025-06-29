@@ -1,0 +1,295 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow: hidden;
+
+}
+
+.html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+body {
+    width: 200vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: black;
+    min-height: 500px;
+}
+
+
+.gameboard-container {
+    width: 100vh;
+    height: 100vh;
+    margin: none;
+    padding: 20px;
+    background: black;
+    display: none;
+}
+
+.gameboard {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid rgb(67, 66, 66);
+    outline: none;
+}
+
+.gameboard-level1,
+.gameboard-level2,
+.gameboard-level3,
+.gameboard-level4 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+}
+
+
+.gameboard .cell {
+    border: 1px solid rgb(67, 66, 66);
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-grow: 1;
+    /* allow flex items to grow and fill the container */
+    overflow: hidden;
+
+}
+
+.gameboard #blank-space {
+    color: rgba(255, 255, 255, 0.05)
+}
+
+.gameboard-level1 {
+    font-size: 10rem;
+}
+
+.gameboard-level2 {
+    font-size: 7rem;
+}
+
+.gameboard-level2 #diamond-space {
+    font-size: 5rem;
+}
+
+.gameboard-level2 #coin-space {
+    font-size: 5rem;
+}
+
+.gameboard-level3 {
+    font-size: 4rem;
+}
+
+.gameboard-level3 #block1-space,
+.gameboard-level3 #block2-space,
+.gameboard-level3 #block3-space {
+    font-size: 5.5rem;
+}
+
+.gameboard-level4 #diamond-space {
+    font-size: 1rem;
+}
+
+.gameboard-level4 {
+    font-size: 3rem;
+}
+
+.gameboard-level4 #checked-space {
+    font-size: 4rem;
+
+}
+
+.gameboard-level4 #blank-space {
+    font-size: 2rem;
+}
+
+.gameboard-level4 #coin-space {
+    font-size: 2rem;
+}
+
+.gameboard-level4 #diamond-space {
+    font-size: 2rem;
+}
+
+.gameboard-level4 #hazard-space {
+    font-size: 2.5rem;
+}
+
+
+/* gameboard spaces */
+
+#player-icon {
+    color: rgb(255, 183, 183);
+}
+
+#block2-space {
+    color: rgb(194, 159, 104);
+}
+
+#block3-space,
+#secret-space {
+    color: rgb(173, 127, 68);
+}
+
+#block1-space {
+    color: rgb(237, 207, 159);
+}
+
+#scythe-icon {
+    color: rgb(103, 101, 62);
+}
+
+#pickaxe-icon {
+    color: rgb(103, 101, 62);
+}
+
+#blank-space {
+    font-size: 1em;
+}
+
+#checked-space {
+    font-size: 2em;
+}
+
+
+#hazard-space {
+    color: rgb(136, 22, 22);
+}
+
+#key-space {
+    color: rgb(163, 143, 28);
+}
+
+#reset-space {
+    color: brown;
+}
+
+#emerald-space {
+    color: rgb(31, 162, 24);
+}
+
+#ruby-space {
+    color: rgb(255, 86, 86);
+}
+
+.info-section {
+    color: white;
+    font-size: 2rem;
+    display: none;
+    flex-direction: column;
+
+}
+
+.emerald-icon {
+    margin-left: 7px;
+    font-size: 3.5rem;
+}
+
+.ruby-icon {
+    font-size: 3.5rem;
+
+}
+
+
+.help-container {
+    background-color: rgb(33, 33, 33);
+    padding-left: 10px;
+    color: white;
+    width: 400px;
+    height: 600px;
+    overflow-y: auto;
+    margin-right: 1rem;
+    display: none;
+    flex-direction: column;
+}
+
+.info-section button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background: black;
+    outline: none;
+    border: 1px solid rgb(54, 54, 54);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: rgb(31, 31, 31);
+    border: 1px solid white;
+}
+
+.start-page {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.start-page h1 {
+    color: white;
+    font-size: 100px;
+}
+
+.start-page input {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 40px;
+}
+
+.start-page input::placeholder {
+    font-size: 30px;
+    padding-left: 15px;
+}
+
+.start-page .start-button {
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.info-section .player-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-section .icons-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.info-section .icons-container h4 {
+    margin: 30px 0;
+    padding: none;
+}
+
+.win-container,
+.lose-container {
+    color: white;
+    font-size: 60px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-again {
+    width: 400px;
+    height: 100px;
+    font-size: 50px;
+    cursor: pointer;
+}
